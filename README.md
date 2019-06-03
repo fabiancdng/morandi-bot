@@ -5,7 +5,7 @@
 ## What is Morandi Bot?
 Morandi is a discord bot developed in discord.js.
 The special about Morandi: Many Discord users are missing the functionalitys of TeamSpeak support bot solutions. Not anymore! With **Morandi** you can build your own **support system** for your Discord server. Find details on the wiki.
-> Link to wiki here.
+> Wiki is comming soon! 
 #
 ## Functions
 Morandi has many features for you and your discord server.
@@ -25,7 +25,7 @@ You can create a queue channel and every time a user joins this channel, each me
 
 **There are many more features**  
 Find all commands and features at the wiki.
-> Link to wiki here.
+> Wiki is comming soon!
 
 #
 ## How can I use Morandi?  
@@ -33,7 +33,7 @@ That is very easy! You can simply click on "Invite":
 [Invite Morandi to your server](https://discordapp.com/oauth2/authorize?client_id=584108228523065387&permissions=8&scope=bot)
 
 As an alternative, you can download this repository and host the bot yourself. A detailed description can be found in the wiki (link below).
-> Link to wiki here.
+> Wiki is comming soon!
 
 #
 ## What are the limitations?  
