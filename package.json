@@ -1,0 +1,27 @@
+{
+  "name": "morandi-bot",
+  "version": "1.0.0",
+  "description": "A discord bot with nice features.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "*",
+    "mysql": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiancdng/morandi-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Fabian R. (fabiancdng)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabiancdng/morandi-bot/issues"
+  },
+  "homepage": "https://github.com/fabiancdng/morandi-bot#readme"
+}
