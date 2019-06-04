@@ -32,8 +32,20 @@ Find all commands and features at the wiki.
 That is very easy! You can simply click on "Invite":
 [Invite Morandi to your server](https://discordapp.com/oauth2/authorize?client_id=584108228523065387&permissions=8&scope=bot)
 
-As an alternative, you can download this repository and host the bot yourself. A detailed description can be found in the wiki (link below).
+As an alternative, you can download this repository and host the bot yourself. Just follow the installation instructions below. A detailed description can be found in the wiki (link below).
 > Wiki is comming soon!
+
+### Installation
+Fist of all you have to install [Node.js](https://nodejs.org/) and npm.   
+   
+On linux systems just run this in the terminal:   
+```git clone https://github.com/fabiancdng/morandi-bot && cd morandi-bot && npm i && npm start```   
+   
+For windows system a installation (batch) script is comming soon!   
+   
+After the installation, install mysql and go to the "morandi-bot/config.js" file and configure mysql.
+
+Then restart the bot and it should work.
 
 #
 ## What are the limitations?  
