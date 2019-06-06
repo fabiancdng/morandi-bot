@@ -21,14 +21,14 @@ module.exports.handle = async (bot, m, config, db) => {
 
         
         if(!bot.modules.has(command)) {
-            embedUtil.sendEmbed(m, "red", "ERROR", "This command is not registered! Is there a typo?");
+            embedUtil.sendEmbed(m.channel, "red", "ERROR", "This command is not registered! Is there a typo?");
             return;
         };
         
         try {
             bot.modules.get(command).exec(bot, m, args, db);
         } catch(error) {
-            embedUtil.sendEmbed(m, "red", "ERROR", "The Execution of the command failed:\n```"+error+"```");
+            embedUtil.sendEmbed(m.channel, "red", "ERROR", "The Execution of the command failed:\n```"+error+"```");
         }
     });
 }

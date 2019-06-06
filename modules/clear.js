@@ -9,16 +9,16 @@ module.exports = {
                 m.channel.fetchMessages({ limit: limit })
                 .then(messages => {
                     m.channel.bulkDelete(messages);
-                    embedUtil.sendEmbed(m, "blue", "", "Deleted "+args[0]+" message(s).");
-                    }).catch(error => {embedUtil.sendEmbed(m, "red", "ERROR", "The execution of the command failed:\n```"+error+"```");});
+                    embedUtil.sendEmbed(m.channel, "blue", "", "Deleted "+args[0]+" message(s).");
+                    }).catch(error => {embedUtil.sendEmbed(m.channel, "red", "ERROR", "The execution of the command failed:\n```"+error+"```");});
             } else {
-                embedUtil.sendEmbed(m, "red", "", "The number of messages to be deleted must be less than 100 and greater than 0.");
+                embedUtil.sendEmbed(m.channel, "red", "", "The number of messages to be deleted must be less than 100 and greater than 0.");
             }
         } else {
             m.channel.fetchMessages({ limit: 2 }).then(messages => {
                     m.channel.bulkDelete(messages);
-                    embedUtil.sendEmbed(m, "blue", "", "Deleted 1 message.");
-            }).catch(error => {embedUtil.sendEmbed(m, "red", "ERROR", "The execution of the command failed:\n```"+error+"```")});
+                    embedUtil.sendEmbed(m.channel, "blue", "", "Deleted 1 message.");
+            }).catch(error => {embedUtil.sendEmbed(m.channel, "red", "ERROR", "The execution of the command failed:\n```"+error+"```")});
         }
     }
 };

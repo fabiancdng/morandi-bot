@@ -35,7 +35,7 @@ module.exports = {
             });
         } else if (args[0]) {
             let des = bot.modules.get(args[0]).description;
-            embedUtil.sendEmbed(m, "blue", "HELP", des);
+            embedUtil.sendEmbed(m.channel, "blue", "HELP", des);
             return;
         }
         while (!msg) { if (embed) { msg = m.channel.send(embed); }} //sending message if embed is there

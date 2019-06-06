@@ -16,7 +16,7 @@ module.exports = {
             });
             m.channel.send(embed);
         } else {
-            embedUtil.sendEmbed(m, "red", "ERROR", "Syntax: say <Text to say>");
+            embedUtil.sendEmbed(m.channel, "red", "ERROR", "Syntax: say <Text to say>");
         }
     }
 }

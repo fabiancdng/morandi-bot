@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "discord.js": "*",
-    "mysql": "*"
+    "mysql": "*",
+    "readline-sync": "^1.4.9"
   },
   "repository": {
     "type": "git",

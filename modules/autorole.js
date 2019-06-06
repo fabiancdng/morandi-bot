@@ -8,18 +8,18 @@ module.exports = {
             if(role) {
                 db.query("UPDATE guilds SET autorole = '"+args[0]+"' WHERE guild_id = '"+m.guild.id+"'", (e, r, f) => {
                     if(e) throw e;
-                    embedUtil.sendEmbed(m, "green", "Autorole set", "The autorole was set to '"+role.name+"' successfully!");
+                    embedUtil.sendEmbed(m.channel, "green", "Autorole set", "The autorole was set to '"+role.name+"' successfully!");
                 });
             } else if(args[0] == "off") {
                 db.query("UPDATE guilds SET autorole = '' WHERE guild_id = '"+m.guild.id+"'", (e, r, f) => {
                     if(e) throw e;
-                    embedUtil.sendEmbed(m, "green", "Autorole turned off", "The autorole was turned off successfully!");
+                    embedUtil.sendEmbed(m.channel, "green", "Autorole turned off", "The autorole was turned off successfully!");
                 });
             } else {
-                embedUtil.sendEmbed(m, "red", "", "**This role does not exist.**\nTry: help autorole");
+                embedUtil.sendEmbed(m.channel, "red", "", "**This role does not exist.**\nTry: help autorole");
             }
         } else {
-            embedUtil.sendEmbed(m, "red", "", "**Syntax:** autorole <Role-ID>");
+            embedUtil.sendEmbed(m.channel, "red", "", "**Syntax:** autorole <Role-ID>");
         }
     }
 }

@@ -1,4 +1,4 @@
-module.exports.sendEmbed = async (m, color, title, description) => {
+module.exports.sendEmbed = async (channel, color, title, description) => {
     const discord = require("discord.js");
     
     //Colors
@@ -9,9 +9,7 @@ module.exports.sendEmbed = async (m, color, title, description) => {
     if(color == "pink") color = 0xff00fb;
     if(color == "gold") color = 0xffa200;
 
-    let emb = new discord.RichEmbed()
-    .setColor(color)
-    .setTitle(title)
-    .setDescription(description);
-    m.channel.send(emb);
+    let emb = new discord.RichEmbed({title: title, color: color, description: description});
+
+    channel.send(emb);
 }

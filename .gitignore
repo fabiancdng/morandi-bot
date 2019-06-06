@@ -61,4 +61,7 @@ typings/
 .next
 .directory
 package-lock.json
-config.js
+
+# private data
+#config.json
+config.json

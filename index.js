@@ -11,13 +11,20 @@
 
     (c) 2019 Fabian R. (fabiancdng)
 */
+var config;
+function test(callback) {
+    const configUtil = require("./utils/config-util");
+    configUtil.handle(callback);
+}
+
+test((config) => {
+
 const discord = require("discord.js");
-const fs = require("fs");
 const mysql = require("mysql");
 // Internal imports
-const config = require("./config");
 const embedUtil = require("./utils/embed-util");
 const dbUtil = require("./utils/db-util");
+const fs = require("fs");
 const message_event = require("./events/message_event");
 const guildCreate_event = require("./events/guildCreate_event");
 const guildDelete_event = require("./events/guildDelete_event");
@@ -65,3 +72,5 @@ bot.on("voiceStateUpdate", async (oldMember, newMember) => voiceStateUpdate_even
 bot.on("guildMemberAdd", async (mem) => guildMemberAdd_event.handle(mem, db));
 
 bot.login(config.token);
+
+});

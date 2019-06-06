@@ -56,5 +56,6 @@ Then restart the bot and it should work.
 - Morandi uses some third party libraries:  
     + [discord.js](https://github.com/discordjs/discord.js)
     + [mysql](https://github.com/mysqljs/mysql)
+    + [readline-sync](https://github.com/anseki/readline-sync)
   
 - If you find a bug or something else not mentioned in this readme/in the wiki, you can open a new issue! We will be glad and hope, your problem will get fixed soon!
