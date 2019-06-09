@@ -1,6 +1,6 @@
 # Morandi Bot
 
-<p align="center"><img src="https://cdn.discordapp.com/avatars/584108228523065387/f762ac9bbf111db8b5c6fc358d.png?size=512dcaa6a1db8b5c6fc358d.png?size=256"></p>
+<p align="center"><img src="https://cdn.discordapp.com/avatars/584108228523065387/f762ac9bbf11dcaa6a1db8b5c6fc358d.png?size=256"></p>
 
 ## What is Morandi Bot?
 Morandi is a discord bot developed in discord.js.
