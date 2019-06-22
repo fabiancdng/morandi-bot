@@ -4,7 +4,8 @@ module.exports.run = async (bot, oldMember, newMember, db, oldUserChannel, newUs
     if (newUserChannel == undefined) return;
     else {
     var queue_channel;
-    var ticketTime = 2000;
+    var claimed = false;
+    var ticketTime = 600000;
         db.query("SELECT queue FROM guilds WHERE guild_id = '"+newUserChannel.guild.id.toString()+"'", (e, r, f) => {
             if(!r[0]) return;
             if(newUserChannel.id == r[0].queue) {
@@ -26,8 +27,10 @@ module.exports.run = async (bot, oldMember, newMember, db, oldUserChannel, newUs
                     
                     //Timer to delete the ticket, if it wasn't claimed.
                     setTimeout(() => {
-                        embedUtil.sendEmbed(newMember, "red", "Your ticket was not claimed.", "I'm sorry.\nYour ticket was not claimed by anyone permitted.\nYou can try it again later.");
-                        newMember.setVoiceChannel(null);
+                        if(!claimed) {
+                            embedUtil.sendEmbed(newMember, "red", "Your ticket was not claimed.", "I'm sorry.\nYour ticket was not claimed by anyone permitted.\nYou can try it again later.");
+                            newMember.setVoiceChannel(null);
+                        } else return;
                     }, ticketTime + 200);
 
                     //Send a message to each supporter.
@@ -53,6 +56,7 @@ module.exports.run = async (bot, oldMember, newMember, db, oldUserChannel, newUs
                                                 return;
                                             } else {
                                                 let supporter = newUserChannel.guild.members.find(val => val.id == r.users.last().id);
+                                                claimed = true;
                                                 embedUtil.sendEmbed(newMember, "green", "Your ticket was claimed.", "Your ticket was claimed by <@"+supporter.id+">.\nYou will be moved automatically in a few seconds.");
                                                 newMember.setVoiceChannel(supporter.voiceChannel);
                                             }

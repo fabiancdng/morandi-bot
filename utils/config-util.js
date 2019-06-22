@@ -15,11 +15,11 @@ module.exports.handle = (callback) => {
     }
 
     function ask_data() {
-        config_template.mysql.host = rl.question("[MySQL] host: ");
-        config_template.mysql.port = rl.question("[MySQL] port (3306): ");
-        config_template.mysql.user = rl.question("[MySQL] user: ");
-        config_template.mysql.pass = rl.question("[MySQL] password: ");
-        config_template.token = rl.question("[Bot] token: ");
+        config_template.mysql.host = rl.question("MySQL server adress: ");
+        config_template.mysql.port = rl.question("MySQL port (default: 3306): ");
+        config_template.mysql.user = rl.question("MySQL username: ");
+        config_template.mysql.pass = rl.question("MySQL password: ");
+        config_template.token = rl.question("Discord bot token: ");
     }
 
     fs.exists(conf_file, (exists) => {
