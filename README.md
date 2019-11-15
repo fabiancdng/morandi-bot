@@ -1,13 +1,15 @@
-# Morandi Bot
+# Morandi Bot [ARCHIVED]
 
 <p align="center"><img src="https://cdn.discordapp.com/avatars/584108228523065387/f762ac9bbf11dcaa6a1db8b5c6fc358d.png?size=256"></p>
+
+## THIS REPOSITORY IS ARCHIVED.
 
 ## What is Morandi Bot?
 Morandi is a discord bot developed in discord.js.
 The special about Morandi: Many Discord users are missing the functionalitys of TeamSpeak support bot solutions. Not anymore! With **Morandi** you can build your own **support system** for your Discord server.
 
 #
-## Functions
+## Features
 Morandi has many features for you and your discord server.
 
 **There are moderation features like:**  
@@ -28,10 +30,8 @@ You can create a queue channel and every time a user joins this channel, each me
 
 #
 ## How can I use Morandi?  
-That is very easy! You can simply click on "Invite":
-[Invite Morandi to your server](https://discordapp.com/oauth2/authorize?client_id=584108228523065387&permissions=8&scope=bot)
 
-The best way to use it is, to host the bot on your own PC or your server.   
+You have to host the bot on your own PC or your server.   
 To do this, follow the installation guide below.
 
 ### Installation
@@ -39,17 +39,10 @@ Fist of all you have to install [Node.js](https://nodejs.org/) and npm.
    
 On linux systems just run this in the terminal:   
 ```git clone https://github.com/fabiancdng/morandi-bot && cd morandi-bot && npm i && npm start```   
-   
-For windows system a installation (batch) script is comming soon!   
-   
+
 After the installation, install mysql and go to the "morandi-bot/config.js" file and configure mysql.
 
 Then restart the bot and it should work.
-
-#
-## What things we will improve soon?  
-- Currently, the number of queue is limited to one. But we are working to make this number get bigger. In fact, this is currently our highest priority of things. So you can expect this to be done at the next update!
-- In relation to the above mentioned limitation, it is not possible at the moment to assign a role to each of the queues. But this will be fixed soon as well!
 
 #
 ## About  
